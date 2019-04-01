@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Channels>
+    <Channel>
+        <Name>LOBBY</Name>
+        <Eltern>ROOT</Eltern>
+    </Channel>
+    <Channel>
+        <Name>Spiele</Name>
+        <Eltern>ROOT</Eltern>
+    </Channel>
+    <Channel>
+        <Name>Frogger</Name>
+        <Eltern>Spiele</Eltern>
+    </Channel>
+    <Channel>
+        <Name>BreakOut</Name>
+        <Eltern>Spiele</Eltern>
+    </Channel>
+    <Channel>
+        <Name>Betriebssysteme</Name>
+        <Eltern>ROOT</Eltern>
+    </Channel>
+    <Channel>
+        <Name>Windows</Name>
+        <Eltern>Betriebssysteme</Eltern>
+    </Channel>
+    <Channel>
+        <Name>Linux</Name>
+        <Eltern>Betriebssysteme</Eltern>
+    </Channel>
+    <Channel>
+        <Name>MacOS</Name>
+        <Eltern>Betriebssysteme</Eltern>
+    </Channel>
+    <Channel>
+        <Name>Ubuntu</Name>
+        <Eltern>Linux</Eltern>
+    </Channel>
+    <Channel>
+        <Name>Arch</Name>
+        <Eltern>Linux</Eltern>
+    </Channel>
+</Channels>

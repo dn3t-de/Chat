@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="489.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/8"
+      fx:controller="server.controller.ServerGUIController">
+    <!-- Button zum Starten des Servers -->
+    <Button fx:id="btnStartServer" layoutX="24.0" layoutY="15.0" mnemonicParsing="false" onAction="#starteServer"
+            prefHeight="25.0" prefWidth="193.0" text="Start"/>
+    <!-- Button zum Stoppen des Servers -->
+    <Button fx:id="btnStoppSterver" disable="true" layoutX="24.0" layoutY="50.0" mnemonicParsing="false"
+            onAction="#stoppServer" prefHeight="25.0" prefWidth="193.0" text="Stopp"/>
+    <!--  Button zum Hinzufügen eines Nutzers -->
+    <Button fx:id="btnNutzerHinzufuegen" disable="true" layoutX="909.0" layoutY="15.0" mnemonicParsing="false"
+            onAction="#nutzerHinzufuegen" prefHeight="59.0" prefWidth="139.0" text="Nutzer hinzufügen"/>
+    <!-- Button zum Löschen eines Nutzers -->
+    <Button fx:id="btnNutzerLoeschen" disable="true" layoutX="791.0" layoutY="443.0" mnemonicParsing="false"
+            onAction="#nutzerLoeschen"
+            prefHeight="26.0" prefWidth="257.0" text="Nutzer entfernen"/>
+    <!-- Button um den Server zu beenden -->
+    <Button fx:id="btnBeenden" layoutX="297.0" layoutY="15.0" mnemonicParsing="false" onAction="#beendeServer"
+            prefHeight="25.0" prefWidth="193.0" text="Beenden"/>
+
+    <!-- Label Chaträume -->
+    <Label layoutX="24.0" layoutY="90.0" prefHeight="15.0" prefWidth="330.0" text="Chaträume"/>
+    <!-- Label Status -->
+    <Label layoutX="373.0" layoutY="90.0" prefHeight="15.0" prefWidth="330.0" text="Status"/>
+    <!-- Label Username -->
+    <Label layoutX="578.0" layoutY="15.0" prefHeight="25.0" prefWidth="71.0" text="Username:"/>
+    <!-- Label Passwort -->
+    <Label layoutX="578.0" layoutY="50.0" prefHeight="25.0" prefWidth="71.0" text="Passwort:"/>
+    <!-- Label Nutzerliste -->
+    <Label layoutX="794.0" layoutY="90.0" prefHeight="16.0" prefWidth="257.0" text="Nutzerliste"/>
+
+    <!-- Textfeld zur Eingabe eines Nutzernamens -->
+    <TextField fx:id="tfUsername" layoutX="676.0" layoutY="15.0" prefHeight="25.0" prefWidth="210.0"/>
+    <!-- Textfeld zur Eingabe eines Passworts -->
+    <TextField fx:id="tfPasswort" layoutX="676.0" layoutY="50.0" prefHeight="25.0" prefWidth="210.0"/>
+
+    <!-- TextArea fuer Statusnachrichten -->
+    <TextArea fx:id="taStatus" editable="false" layoutX="373.0" layoutY="119.0" prefHeight="350.0" prefWidth="391.0"
+              wrapText="true"/>
+
+    <!-- ListView zur Uebersicht ueber die angemeldeten Nutzer -->
+    <ListView fx:id="lvNutzerliste" editable="false" layoutX="791.0" layoutY="119.0" prefHeight="312.0"
+              prefWidth="257.0"/>
+    <!-- Listview zur Uebersicht ueber die aktuell existierenden Channel -->
+    <ListView fx:id="lvChannels" editable="false" layoutX="24.0" layoutY="119.0" prefHeight="350.0" prefWidth="318.0"/>
+
+</Pane>

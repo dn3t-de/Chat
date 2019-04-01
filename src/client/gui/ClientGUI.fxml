@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="579.0" prefWidth="1094.0" xmlns="http://javafx.com/javafx/8"
+      fx:controller="client.controller.ClientGUIController">
+    <children>
+
+        <!-- Damit Tabreihenfolge gewährleistet wird, werden bestimmte Elemente in Bloecken angegeben -->
+        <!-- Anmeldeprozess -->
+        <!-- Textfeld zur Eingabe der Serveradresse -->
+        <TextField fx:id="tfServerAdresse" layoutX="145.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0"
+                   text="127.0.0.1"/>
+        <!-- Button zum Verbinden zum Server -->
+        <Button fx:id="btnVerbindungHerstellen" layoutX="145.0" layoutY="50.0" mnemonicParsing="false"
+                onAction="#verbindeZuServer" prefHeight="25.0" prefWidth="130.0" text="Verbinden"/>
+        <!-- Textfeld zur Eingabe des Benutzernamens -->
+        <TextField fx:id="tfBenutzername" disable="true" layoutX="492.0" layoutY="14.0" prefHeight="25.0"/>
+        <!-- PasswordField zur Eingabe des Passworts -->
+        <PasswordField fx:id="pfPasswort" disable="true" layoutX="492.0" layoutY="50.0" prefHeight="25.0"/>
+        <!-- Textfeld zur Eingabe eines Befehls/einer Nachricht-->
+        <TextField fx:id="tfNachricht" layoutX="372.0" layoutY="538.0" prefHeight="25.0" prefWidth="449.0"/>
+
+        <!-- Channelerstellprozess -->
+        <!-- Textfeld zur Eingabe eines neuen Channelnamens -->
+        <TextField fx:id="tfNeuerChannelName" layoutX="8.0" layoutY="505.0" prefHeight="25.0" prefWidth="270.0"/>
+        <!-- Button zum erstellen eines neuen Channels -->
+        <Button fx:id="btnErstelleRaum" layoutX="150.0" layoutY="538.0" mnemonicParsing="false" onAction="#erstelleRaum"
+                prefHeight="25.0" prefWidth="130.0" text="Raum erstellen"/>
+
+
+        <!-- Button zum Trennen der Verbindung -->
+        <Button fx:id="btnVerbindungTrennen" disable="true" layoutX="8.0" layoutY="50.0" mnemonicParsing="false"
+                onAction="#trenneVerbindung" prefHeight="25.0" prefWidth="130.0" text="Trennen"/>
+        <!-- Button um sich auf dem Server anzumelden -->
+        <Button fx:id="btnAnmelden" disable="true" layoutX="686.0" layoutY="14.0" mnemonicParsing="false"
+                onAction="#authentifiziereAufServer" prefHeight="25.0" prefWidth="132.0" text="Anmelden"/>
+        <!-- Button um sich auf dem Server abzumelden -->
+        <Button fx:id="btnAbmelden" disable="true" layoutX="686.0" layoutY="50.0" mnemonicParsing="false"
+                onAction="#ausloggen" prefHeight="25.0" prefWidth="132.0" text="Abmelden"/>
+        <!-- Button zum Beenden des Clients -->
+        <Button fx:id="btnBeenden" layoutX="941.0" layoutY="14.0" mnemonicParsing="false" onAction="#beendeClient"
+                prefHeight="25.0" prefWidth="132.0" text="Beenden"/>
+        <!-- Button zum des Befehls/der Nachricht-->
+        <Button fx:id="btnSendeNachricht" layoutX="836.0" layoutY="538.0" mnemonicParsing="false"
+                onAction="#sendeNachricht" prefHeight="25.0" prefWidth="237.0" text="Senden"/>
+        <!-- Button zum Raumbetreten -->
+        <Button fx:id="btnBetrittRaum" layoutX="6.0" layoutY="469.0" mnemonicParsing="false" onAction="#betrittRaum"
+                prefHeight="25.0" prefWidth="130.0" text="Raum betreten"/>
+        <!-- Button um den Raum zu löschen -->
+        <Button fx:id="btnLoescheRaum" layoutX="150.0" layoutY="469.0" mnemonicParsing="false" onAction="#loescheRaum"
+                prefHeight="25.0" prefWidth="130.0" text="Raum löschen"/>
+
+        <!-- Label Benutzername -->
+        <Label layoutX="372.0" layoutY="14.0" prefHeight="25.0" prefWidth="104.0" text="Benutzername"/>
+        <!-- Label Serveradresse -->
+        <Label layoutX="8.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0" text="Serveradresse"/>
+        <!-- Label Channelliste -->
+        <Label layoutX="8.0" layoutY="92.0" prefHeight="25.0" prefWidth="114.0" text="Channelliste"/>
+        <!-- Label Nachrichten -->
+        <Label layoutX="293.0" layoutY="92.0" prefHeight="25.0" prefWidth="114.0" text="Nachrichten"/>
+        <!-- Label Nachticht -->
+        <Label layoutX="292.0" layoutY="538.0" prefHeight="25.0" prefWidth="70.0" text="Nachricht"/>
+        <!--  Label Passwort -->
+        <Label layoutX="372.0" layoutY="50.0" prefHeight="25.0" prefWidth="76.0" text="Passwort"/>
+        <!-- Label Nutzerliste des Channels -->
+        <Label layoutX="836.0" layoutY="127.0" prefHeight="25.0" prefWidth="237.0" text="Nutzerliste des Channels"/>
+        <!-- Label Aktueller Channel -->
+        <Label layoutX="476.0" layoutY="92.0" prefHeight="25.0" prefWidth="130.0" text="Aktueller Channel:"/>
+        <!-- Label das anzeigt, in welchem Channel sich der Nutzer befindet -->
+        <Label fx:id="lblAktuellerChannel" layoutX="613.0" layoutY="92.0" prefHeight="25.0" prefWidth="205.0"
+               text="Noch nicht eingeloggt">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Label>
+        <!-- Label Eingeloggt -->
+        <Label layoutX="832.0" layoutY="92.0" prefHeight="25.0" prefWidth="104.0" text="Eingeloggt als:"/>
+        <!-- Label um den aktuellen Benutzernamen anzuzeigen-->
+        <Label fx:id="lblUsername" layoutX="942.0" layoutY="92.0" prefHeight="25.0" prefWidth="130.0"
+               text="Nicht eingeloggt">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Label>
+
+        <!-- CheckBox zur Erstellung eines Channels am ROOT Knoten -->
+        <CheckBox fx:id="cbROOTKnoten" layoutX="14.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0"
+                  prefWidth="130.0" text="Root Channel"/>
+
+        <!-- Textarea für Darstellung der Nachrichten -->
+        <TextArea fx:id="taNachrichten" editable="false" layoutX="292.0" layoutY="127.0" prefHeight="403.0"
+                  prefWidth="526.0" wrapText="true"/>
+
+        <!-- ListView zur zur Darstellung der Channels -->
+        <ListView fx:id="lvChannels" layoutX="8.0" layoutY="127.0" prefHeight="329.0" prefWidth="270.0"/>
+        <!-- ListView zur zur Darstellung der Nutzer im Channel -->
+        <ListView fx:id="lvNutzer" layoutX="836.0" layoutY="154.0" prefHeight="376.0" prefWidth="237.0"/>
+    </children>
+
+</Pane>

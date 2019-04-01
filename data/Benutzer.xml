@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Benutzer>
+    <Nutzer>
+        <Name>alice</Name>
+        <Passwort>ecilA</Passwort>
+    </Nutzer>
+    <Nutzer>
+        <Name>bob</Name>
+        <Passwort>boB</Passwort>
+    </Nutzer>
+    <Nutzer>
+        <Name>eve</Name>
+        <Passwort>evE</Passwort>
+    </Nutzer>
+</Benutzer>
