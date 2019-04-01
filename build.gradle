@@ -11,7 +11,6 @@ dependencies {
   implementation 'org.jdom:jdom:2.0.2'
   implementation 'org.openjfx:javafx:11.0.2'
   implementation 'org.openjfx:javafx-fxml:11.0.2'
-  implementation 'org.openjfx:javafx-graphics:11.0.2'
 }
 
 task runClient(type: JavaExec) {
