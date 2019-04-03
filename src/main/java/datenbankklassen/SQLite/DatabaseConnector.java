@@ -1,3 +1,7 @@
+package datenbankklassen.SQLite;
+
+import datenstrukturklassen.linear.Queue;
+
 import java.sql.*;
 
 /**

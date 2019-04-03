@@ -1,3 +1,7 @@
+package datenstrukturklassen.graph;
+
+import za.List;
+
 /**
  * <p>
  * Materialien zu den zentralen NRW-Abiturpruefungen im Fach Informatik ab 2018

@@ -1,4 +1,8 @@
+package datenbankklassen.MySQL;
+
 import java.sql.*;
+import datenstrukturklassen.linear.Queue;
+
 
 /**
  * <p>
@@ -17,7 +21,7 @@ import java.sql.*;
  * @author Qualitaets- und UnterstuetzungsAgentur - Landesinstitut fuer Schule
  * @version 2016-01-24
  */
-public class DatabaseConnectorMySQL{
+public class DatabaseConnector{
   private java.sql.Connection connection;  
   private QueryResult currentQueryResult = null;
   private String message = null;
@@ -29,7 +33,7 @@ public class DatabaseConnectorMySQL{
    * Mit den Parametern pUsername und pPassword werden Benutzername und Passwort fuer die 
    * Datenbank uebergeben.
    */
-  public DatabaseConnectorMySQL(String pIP, int pPort, String pDatabase, String pUsername, String pPassword){
+  public DatabaseConnector(String pIP, int pPort, String pDatabase, String pUsername, String pPassword){
     try {
       //Laden der Treiberklasse
       Class.forName("com.mysql.jdbc.Driver");
