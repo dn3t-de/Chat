@@ -31,7 +31,7 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("gui/ServerGUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/ServerGUI.fxml"));
         primaryStage.setTitle("Chat Server");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);

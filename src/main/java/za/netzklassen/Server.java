@@ -1,9 +1,8 @@
 package za.netzklassen;
 
-import za.List;
-
 import java.net.ServerSocket;
 import java.net.Socket;
+import za.List;
 
 /**
  * <p>
